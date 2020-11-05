@@ -1,0 +1,3 @@
+<launch>
+  <rosparam param="first_param">1</rosparam>
+</launch>

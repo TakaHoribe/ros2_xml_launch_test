@@ -1,9 +1,8 @@
 <launch>
-  <arg name="exec_version" default="1"/>
+  <arg name="exec_version" default="first"/>
   <arg name="package_name" default="ros2_xml"/>
 
-
-  <group if="$(eval exec_version=='1')">
+  <group if="$(eval exec_version=='first')">
     <include file="$(find-pkg-share ros2_xml_launch_test)/launch/first.launch.xml"/>
   </group>
 
