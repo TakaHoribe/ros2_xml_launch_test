@@ -1,0 +1,12 @@
+<launch>
+  <arg name="exec_version" default="1"/>
+  <arg name="package_name" default="ros1_xml"/>
+
+
+  <group if="$(eval exec_version=='1')">
+    <include file="$(find ros1_xml_launch_test)/launch/first.launch.xml"/>
+  </group>
+
+  <include file="$(eval find(arg('package_name')+'_launch_test')+'/launch/second.launch.xml')" />
+
+</launch>
